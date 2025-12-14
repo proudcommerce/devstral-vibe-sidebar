@@ -30,7 +30,7 @@ Before installing this extension, make sure you have:
 ### Step 1: Clone or Download the Repository
 
 ```bash
-git clone https://github.com/proud-commerce/devstral-vibe-sidebar
+git clone https://github.com/proudcommerce/devstral-vibe-sidebar
 cd devstral-vibe-sidebar
 ```
 

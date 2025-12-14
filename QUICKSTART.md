@@ -32,7 +32,7 @@ xcode-select --install
 ### 1. Get the Code
 
 ```bash
-git clone https://github.com/proud-commerce/devstral-vibe-sidebar
+git clone https://github.com/proudcommerce/devstral-vibe-sidebar
 cd devstral-vibe-sidebar
 ```
 
