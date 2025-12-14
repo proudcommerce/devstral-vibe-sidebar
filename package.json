@@ -3,7 +3,7 @@
   "displayName": "Devstral Vibe Sidebar",
   "description": "Integrate Devstral Vibe CLI terminal into VS Code sidebar",
   "version": "0.0.1",
-  "publisher": "diruuu",
+  "publisher": "proudcommercegmbh",
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
