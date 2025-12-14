@@ -1,0 +1,89 @@
+{
+  "name": "devstral-vibe-sidebar",
+  "displayName": "Devstral Vibe Sidebar",
+  "description": "Integrate Devstral Vibe CLI terminal into VS Code sidebar",
+  "version": "0.0.1",
+  "publisher": "diruuu",
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proud-commerce/devstral-vibe-sidebar"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "devstral-vibe-sidebar",
+          "title": "Devstral Vibe",
+          "icon": "resources/devstral-logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "devstral-vibe-sidebar": [
+        {
+          "type": "webview",
+          "id": "devstralVibeView",
+          "name": "Vibe Terminal"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "devstralVibe.openTerminal",
+        "title": "Open Devstral Vibe"
+      }
+    ],
+    "configuration": {
+      "title": "Devstral Vibe Sidebar",
+      "properties": {
+        "devstralVibeSidebar.command": {
+          "type": "string",
+          "default": "vibe",
+          "description": "The command to run in the terminal (e.g., 'vibe' or custom path)",
+          "scope": "window"
+        },
+        "devstralVibeSidebar.additionalArgs": {
+          "type": "string",
+          "default": "",
+          "description": "Additional arguments to pass to the Vibe command",
+          "scope": "window"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "devstralVibe.openTerminal",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "postinstall": "npm run rebuild",
+    "rebuild": "CXXFLAGS='-std=c++20' electron-rebuild -f -w node-pty -v 37.7.0"
+  },
+  "dependencies": {
+    "node-pty": "^1.1.0-beta39",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^5.3.0"
+  }
+}
