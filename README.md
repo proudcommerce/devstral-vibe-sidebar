@@ -1,7 +1,7 @@
 # Devstral Vibe Sidebar Extension for VS Code
 
 This VS Code extension integrates Devstral Vibe CLI directly into your VS Code sidebar, allowing you to interact with Vibe without leaving your editor.
-It is based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?itemName=diruuu.claude-code-sidebar) by [Rudi Wahyudi](https://marketplace.visualstudio.com/publishers/diruuu).
+The fist version 0.0.1 was based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?itemName=diruuu.claude-code-sidebar) by [Rudi Wahyudi](https://marketplace.visualstudio.com/publishers/diruuu) and was also using node-pty an, xcode and xterm.js. Version 0.0.2 changed to use the default VSCode terminal which is a lot more lightweight and straightforward.
 
 ## Features
 
@@ -228,19 +228,3 @@ If you encounter any issues or have questions:
 1. Check the Troubleshooting section above
 2. Open an issue on GitHub
 3. Check the Devstral Vibe documentation
-
-## Changelog
-
-### 0.0.2 (VSCode Terminal)
-
-- switch from custom sidebar terminal implementation to a more robust and lightweight VSCode terminal integration
-
-### 0.0.1 (Initial Release)
-
-- Sidebar integration with Devstral Vibe icon
-- Real terminal using xterm.js and node-pty
-- Auto-start Vibe command on terminal launch
-- Full PTY support with proper terminal emulation
-- Auto cleanup on VS Code exit/restart
-- Terminal resize support
-- Configurable command and arguments
