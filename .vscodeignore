@@ -14,6 +14,3 @@ vsc-extension-quickstart.md
 
 # Include only production dependencies
 node_modules/**
-!node_modules/node-pty/**
-!node_modules/xterm/**
-!node_modules/xterm-addon-fit/**

@@ -6,7 +6,7 @@ It is based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?
 ## Features
 
 - **Sidebar Integration**: Adds a Devstral Vibe icon to the VS Code activity bar
-- **Real Terminal**: Opens a real shell terminal (zsh/bash/etc.) in the sidebar with xterm.js
+- **VSCode Terminal**: Opens a standard VSCode shell terminal (zsh/bash/etc.) to the right of your current editor and loads the Vibe CLI.
 - **Auto-start Vibe**: Automatically runs the `vibe` command when the terminal opens
 - **Auto Cleanup**: Automatically closes the Vibe session when VS Code exits or restarts
 - **Full Terminal Support**: Full terminal capabilities with proper PTY support using node-pty
@@ -17,16 +17,11 @@ It is based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?
 
 Before installing this extension, make sure you have:
 
-1. **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
-2. **VS Code** (v1.85.0 or higher) - [Download here](https://code.visualstudio.com/)
-3. **Devstral Vibe CLI** installed and accessible in your PATH
+1. **VS Code** (v1.85.0 or higher) - [Download here](https://code.visualstudio.com/)
+2. **Devstral Vibe CLI** installed and accessible in your PATH
    - Install with: `curl -LsSf https://mistral.ai/vibe/install.sh | bash`
    - You can verify this by running `vibe --version` in your terminal
    - For more information, see [Devstral Vibe documentation](https://mistral.ai/news/devstral-2-vibe-cli)
-4. **Build Tools** (required for node-pty native module):
-   - **macOS**: Xcode Command Line Tools - `xcode-select --install`
-   - **Windows**: Visual Studio Build Tools (with C++ workload)
-   - **Linux**: build-essential - `sudo apt-get install build-essential` (Ubuntu/Debian)
 
 ## Installation
 
@@ -42,8 +37,6 @@ cd devstral-vibe-sidebar
 ```bash
 npm install
 ```
-
-**Important:** The extension uses `node-pty`, a native Node.js module that needs to be rebuilt for VS Code's Electron version. The `npm install` command will automatically rebuild it via the postinstall script. If you encounter any issues, manually rebuild with:
 
 ```bash
 npm run rebuild
@@ -89,7 +82,7 @@ There are two ways to install the extension locally:
    vsce package
    ```
 
-   This creates a `.vsix` file (e.g., `devstral-vibe-sidebar-0.0.1.vsix`)
+   This creates a `.vsix` file (e.g., `devstral-vibe-sidebar-0.0.2.vsix`)
 
 3. Install the packaged extension:
    - Open VS Code
@@ -104,7 +97,7 @@ There are two ways to install the extension locally:
 
 ### Opening Devstral Vibe
 
-1. Click the Devstral Vibe icon in the activity bar (left sidebar)
+1. Click the Devstral Vibe icon above your current editor window
 2. A terminal will open in the sidebar (your default shell: zsh, bash, etc.)
 3. The extension automatically runs `vibe` command for you
 4. You can now interact with Devstral Vibe directly in the terminal
@@ -118,8 +111,6 @@ There are two ways to install the extension locally:
 
 - Type directly in the terminal - it's a real terminal with full functionality
 - Use all Vibe commands and features as you normally would
-- Reference files with `@` autocomplete
-- Execute shell commands with `!`
 - Use slash commands for configuration adjustments
 - The terminal supports all standard terminal operations (copy, paste, keyboard shortcuts, etc.)
 
@@ -147,27 +138,6 @@ You can also manually exit Vibe by typing `exit` or pressing `Ctrl+D`, then clos
 - Try running `vibe --version` in your regular terminal
 - If it doesn't work, reinstall Vibe CLI: `curl -LsSf https://mistral.ai/vibe/install.sh | bash`
 
-### "node-pty" module errors or NODE_MODULE_VERSION mismatch
-
-This happens when node-pty is compiled for a different Node.js version than VS Code's Electron uses.
-
-**Solution:**
-
-```bash
-# Rebuild node-pty for VS Code's Electron version
-npm run rebuild
-
-# Or do a fresh install
-rm -rf node_modules
-npm install
-```
-
-The postinstall script should automatically rebuild node-pty, but if it fails:
-
-- Make sure you have build tools installed (Xcode Command Line Tools on macOS, Visual Studio Build Tools on Windows, build-essential on Linux)
-- On macOS: `xcode-select --install`
-- On Ubuntu/Debian: `sudo apt-get install build-essential`
-- On Windows: Install Visual Studio Build Tools
 
 ### Terminal shows errors or doesn't respond
 
@@ -226,11 +196,9 @@ npm run watch
 The extension:
 
 1. Creates a webview in the VS Code sidebar
-2. Uses **xterm.js** to render a real terminal in the webview
-3. Uses **node-pty** to create a PTY (pseudo-terminal) running your default shell
-4. Automatically sends the `vibe` command to the terminal after it starts
-5. Provides full terminal functionality with proper input/output handling
-6. Cleans up the PTY process when VS Code exits or the extension deactivates
+2. Launches a new VSCode terminal in the webview
+3. Automatically sends the `vibe` command to the terminal after it starts
+4. Provides full terminal functionality with proper input/output handling
 
 ## About Devstral Vibe
 
@@ -262,6 +230,10 @@ If you encounter any issues or have questions:
 3. Check the Devstral Vibe documentation
 
 ## Changelog
+
+### 0.0.2 (VSCode Terminal)
+
+- switch from custom sidebar terminal implementation to a more robust and lightweight VSCode terminal integration
 
 ### 0.0.1 (Initial Release)
 
