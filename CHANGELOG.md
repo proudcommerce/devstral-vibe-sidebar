@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.0.3 - 16.12.2025
+
+- rename to Mistral Vibe
+- update repo urls, add keywords
+
 ## v0.0.2 (VSCode Terminal) - 15.12.2025
 
 - switch from custom sidebar terminal implementation to a more robust and lightweight VSCode terminal integration

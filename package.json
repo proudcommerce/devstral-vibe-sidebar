@@ -1,13 +1,13 @@
 {
   "name": "devstral-vibe-sidebar",
-  "displayName": "Devstral Vibe",
-  "description": "Integrate Devstral Vibe CLI terminal into VS Code",
-  "version": "0.0.2",
+  "displayName": "Mistral Vibe",
+  "description": "Integrate Mistral Vibe CLI terminal into VS Code",
+  "version": "0.0.3",
   "publisher": "proudcommercegmbh",
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/proudcommerce/devstral-vibe-sidebar"
+    "url": "https://github.com/proud-commerce/VSCode-Mistral-Vibe-Sidebar"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -15,12 +15,21 @@
   "categories": [
     "Other"
   ],
-  "main": "./out/extension.js",
+  "keywords": [
+    "vibe",
+    "mistral",
+    "codestral",
+    "terminal",
+    "cli",
+    "devstral",
+    "ai"
+  ],
+    "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "devstralVibe.openTerminal",
-        "title": "Open Devstral Vibe",
+        "title": "Open Mistral Vibe",
         "icon": {
           "light": "resources/devstral-logo.svg",
           "dark": "resources/devstral-logo.svg"
@@ -28,7 +37,7 @@
       },
       {
         "command": "devstralVibe.openNewTerminal",
-        "title": "Open Devstral Vibe in New Terminal",
+        "title": "Open Mistral Vibe in New Terminal",
         "icon": {
           "light": "resources/devstral-logo.svg",
           "dark": "resources/devstral-logo.svg"
@@ -44,7 +53,7 @@
       ]
     },
     "configuration": {
-      "title": "Devstral Vibe",
+      "title": "Mistral Vibe",
       "properties": {
         "devstralVibe.command": {
           "type": "string",

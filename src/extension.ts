@@ -1,11 +1,11 @@
 import * as vscode from 'vscode';
 
-const TERMINAL_NAME = 'Devstral Vibe';
+const TERMINAL_NAME = 'Mistral Vibe';
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Devstral Vibe extension is now active');
+    console.log('Mistral Vibe extension is now active');
 
-    // Register command to open/focus existing Devstral Vibe terminal
+    // Register command to open/focus existing Mistral Vibe terminal
     context.subscriptions.push(
         vscode.commands.registerCommand('devstralVibe.openTerminal', () => {
             openTerminal(context, false);
@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-    console.log('Devstral Vibe extension is being deactivated');
+    console.log('Mistral Vibe extension is being deactivated');
 }
 
 function getWorkingDirectory(): string {

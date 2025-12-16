@@ -1,11 +1,11 @@
-# Devstral Vibe Sidebar Extension for VS Code
+# Mistral Vibe Sidebar Extension for VS Code
 
-This VS Code extension integrates Devstral Vibe CLI directly into your VS Code sidebar, allowing you to interact with Vibe without leaving your editor.
+This VS Code extension integrates Mistral Vibe CLI directly into your VS Code sidebar, allowing you to interact with Vibe without leaving your editor.
 The fist version 0.0.1 was based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?itemName=diruuu.claude-code-sidebar) by [Rudi Wahyudi](https://marketplace.visualstudio.com/publishers/diruuu) and was also using node-pty an, xcode and xterm.js. Version 0.0.2 changed to use the default VSCode terminal which is a lot more lightweight and straightforward.
 
 ## Features
 
-- **Sidebar Integration**: Adds a Devstral Vibe icon to the VS Code activity bar
+- **Sidebar Integration**: Adds a Mistral Vibe icon to the VS Code activity bar
 - **VSCode Terminal**: Opens a standard VSCode shell terminal (zsh/bash/etc.) to the right of your current editor and loads the Vibe CLI.
 - **Auto-start Vibe**: Automatically runs the `vibe` command when the terminal opens
 - **Auto Cleanup**: Automatically closes the Vibe session when VS Code exits or restarts
@@ -18,18 +18,18 @@ The fist version 0.0.1 was based on [Claude Code Sidebar](https://marketplace.vi
 Before installing this extension, make sure you have:
 
 1. **VS Code** (v1.85.0 or higher) - [Download here](https://code.visualstudio.com/)
-2. **Devstral Vibe CLI** installed and accessible in your PATH
+2. **Mistral Vibe CLI** installed and accessible in your PATH
    - Install with: `curl -LsSf https://mistral.ai/vibe/install.sh | bash`
    - You can verify this by running `vibe --version` in your terminal
-   - For more information, see [Devstral Vibe documentation](https://mistral.ai/news/devstral-2-vibe-cli)
+   - For more information, see [Mistral Vibe documentation](https://mistral.ai/news/devstral-2-vibe-cli)
 
 ## Installation
 
 ### Step 1: Clone or Download the Repository
 
 ```bash
-git clone https://github.com/proudcommerce/devstral-vibe-sidebar
-cd devstral-vibe-sidebar
+git clone https://github.com/proud-commerce/VSCode-Mistral-Vibe-Sidebar
+cd VSCode-Mistral-Vibe-Sidebar
 ```
 
 ### Step 2: Install Dependencies
@@ -66,7 +66,7 @@ There are two ways to install the extension locally:
 
 3. This will open a new VS Code window with the extension loaded
 
-4. In the new window, you should see the Devstral Vibe icon in the activity bar (sidebar)
+4. In the new window, you should see the Mistral Vibe icon in the activity bar (sidebar)
 
 #### Option B: Package and Install (Recommended for Regular Use)
 
@@ -95,12 +95,12 @@ There are two ways to install the extension locally:
 
 ## Usage
 
-### Opening Devstral Vibe
+### Opening Mistral Vibe
 
-1. Click the Devstral Vibe icon above your current editor window
+1. Click the Mistral Vibe icon above your current editor window
 2. A terminal will open in the sidebar (your default shell: zsh, bash, etc.)
 3. The extension automatically runs `vibe` command for you
-4. You can now interact with Devstral Vibe directly in the terminal
+4. You can now interact with Mistral Vibe directly in the terminal
 
 ### Keyboard Shortcut
 
@@ -114,7 +114,7 @@ There are two ways to install the extension locally:
 - Use slash commands for configuration adjustments
 - The terminal supports all standard terminal operations (copy, paste, keyboard shortcuts, etc.)
 
-### Closing Devstral Vibe
+### Closing Mistral Vibe
 
 The terminal and Vibe session will automatically close when:
 
@@ -130,7 +130,7 @@ You can also manually exit Vibe by typing `exit` or pressing `Ctrl+D`, then clos
 
 - Make sure the extension is installed correctly
 - Try reloading VS Code (`Ctrl+R` or `Cmd+R`)
-- Check the Output panel (`View > Output`) and select "Devstral Vibe Sidebar" for error messages
+- Check the Output panel (`View > Output`) and select "Mistral Vibe Sidebar" for error messages
 
 ### "vibe is not found" or similar error
 
@@ -200,9 +200,9 @@ The extension:
 3. Automatically sends the `vibe` command to the terminal after it starts
 4. Provides full terminal functionality with proper input/output handling
 
-## About Devstral Vibe
+## About Mistral Vibe
 
-Devstral Vibe is an open-source command-line coding assistant powered by Devstral from Mistral AI. It allows you to explore, modify, and execute changes across your codebase using natural language.
+Mistral Vibe is an open-source command-line coding assistant powered by Mistral / Devstral from Mistral AI. It allows you to explore, modify, and execute changes across your codebase using natural language.
 
 Key features:
 
