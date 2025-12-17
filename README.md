@@ -1,15 +1,14 @@
 # Mistral Vibe Sidebar Extension for VS Code
 
 This VS Code extension integrates Mistral Vibe CLI directly into your VS Code sidebar, allowing you to interact with Vibe without leaving your editor.
-The fist version 0.0.1 was based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?itemName=diruuu.claude-code-sidebar) by [Rudi Wahyudi](https://marketplace.visualstudio.com/publishers/diruuu) and was also using node-pty an, xcode and xterm.js. Version 0.0.2 changed to use the default VSCode terminal which is a lot more lightweight and straightforward.
+The fist version 0.0.1 was based on [Claude Code Sidebar](https://marketplace.visualstudio.com/items?itemName=diruuu.claude-code-sidebar) by [Rudi Wahyudi](https://marketplace.visualstudio.com/publishers/diruuu) and was also using node-pty, xcode and xterm.js. Version 0.0.2 changed to use the default VSCode terminal which is a lot more lightweight and straightforward.
 
 ## Features
 
-- **Sidebar Integration**: Adds a Mistral Vibe icon to the VS Code activity bar
+- **UI Integration**: Adds a Mistral Vibe icon above the VS Code editors, allowing you to open a Vibe session with a single click.
 - **VSCode Terminal**: Opens a standard VSCode shell terminal (zsh/bash/etc.) to the right of your current editor and loads the Vibe CLI.
 - **Auto-start Vibe**: Automatically runs the `vibe` command when the terminal opens
 - **Auto Cleanup**: Automatically closes the Vibe session when VS Code exits or restarts
-- **Full Terminal Support**: Full terminal capabilities with proper PTY support using node-pty
 
 ![Screenshot](resources/screenshot.png)
 
@@ -21,9 +20,13 @@ Before installing this extension, make sure you have:
 2. **Mistral Vibe CLI** installed and accessible in your PATH
    - Install with: `curl -LsSf https://mistral.ai/vibe/install.sh | bash`
    - You can verify this by running `vibe --version` in your terminal
-   - For more information, see [Mistral Vibe documentation](https://mistral.ai/news/devstral-2-vibe-cli)
+   - For more information, see [Mistral Vibe documentation](https://docs.mistral.ai/mistral-vibe/introduction)
 
 ## Installation
+
+Simply install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ProudcommerceGmbH.devstral-vibe-sidebar) or directly from this repository (see below).
+
+## Development and local installation
 
 ### Step 1: Clone or Download the Repository
 
